@@ -1,0 +1,8 @@
+.small-img {
+  max-width: 100px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 10px 0;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
+}

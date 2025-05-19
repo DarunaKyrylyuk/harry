@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HARRY POTTER</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-ico">
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: #0d0d0d url('harry2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 0 30px rgba(255, 204, 0, 0.5);
+      border-bottom: 2px solid #ffcc00;
+    }
+
+    h1 {
+      font-size: 60px;
+      color: #ffcc00;
+      text-shadow: 3px 3px 15px #000;
+      margin: 0;
+    }
+
+    .layout {
+      display: flex;
+      max-width: 1200px;
+      margin: 40px auto;
+      gap: 40px;
+      padding: 20px;
+    }
+
+    .bio {
+      flex: 2;
+      background-color: rgba(15, 15, 15, 0.85);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 204, 0, 0.3);
+    }
+
+    .bio h2 {
+      color: #ffcc00;
+      border-bottom: 2px solid #ffcc00;
+      padding-bottom: 10px;
+      text-shadow: 1px 1px 10px #000;
+    }
+
+    .bio p {
+      font-size: 22px;
+      line-height: 1.7;
+      font-family: 'Arial', serif;
+    }
+
+    .bio img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+    }
+
+    .films {
+      flex: 1;
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 204, 0, 0.2);
+    }
+
+    .films h3 {
+      color: #ffcc00;
+      border-bottom: 1px solid #ffcc00;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+    }
+
+    .films ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .films li {
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f0f0f0;
+      transition: color 0.3s;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .films li:hover {
+      color: #ffcc00;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.75);
+      color: #cccccc;
+      font-size: 14px;
+      border-top: 1px solid #444;
+      box-shadow: 0 -2px 10px rgba(255, 204, 0, 0.3);
+    }
+
+    .broom {
+      position: fixed;
+      top: 15%;
+      left: -150px;
+      width: 100px;
+      opacity: 0.7;
+      z-index: 1;
+      animation: flyBroom 20s linear infinite;
+    }
+
+    @keyframes flyBroom {
+      0% { left: -150px; transform: rotate(-6deg); }
+      50% { transform: rotate(6deg); }
+      100% { left: 110%; transform: rotate(-6deg); }
+    }
+.small-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin: 10px 0;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
+}
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Життя Гаррі Поттера</h1>
+  </header>
+
+  <div class="layout">
+    <main class="bio">
+      <h2>Основні моменти з життя</h2>
+      <img src="smallharry.jpg" alt="Гаррі Поттер" class="small-img">
+      <p><strong>Дитинство:</strong> Гаррі народився 31 липня 1980 року. Після смерті батьків жив у родині Дурслів, де його принижували та змушували жити в комірчині під сходами.</p>
+      <img src="harrypotter.jpg" alt="Гаррі Поттер" class="small-img">
+      <p><strong>Хогвартс:</strong> У 11 років Гаррі дізнався, що він чарівник. У Гоґвортсі він навчався 7 років, проявляючи мужність, лідерство та прагнення до справедливості. Його було розподілено до Ґрифіндору.</p>
+      <img src="friendsharry.jpg" alt="Друзі Гаррі" class="small-img">
+      <p><strong>Друзі:</strong> Герміона Ґрейнджер та Рон Візлі стали його найкращими друзями. Разом вони пройшли через випробування, які зміцнили їхню дружбу.</p>
+      <img src="voldemort.jpg" alt="Гаррі Поттер" class="small-img">
+      <p><strong>Боротьба з Волдемортом:</strong> Гаррі був "обраним", щоб знищити Волдеморта. Йому довелося зіткнутись із смертю, втратами й болем. У фінальній битві при Гоґвортсі він переміг Темного Лорда, знищивши всі горокракси.</p>
+      <img src="fenics.jpg" alt="Гаррі Поттер" class="small-img">
+      <p><strong>Орден Фенікса:</strong> Гаррі був активним учасником Ордену, що боровся проти Волдеморта. Він також створив "Дамблдорову Армію", щоб тренувати студентів для оборони від Темних мистецтв.</p>
+      <img src="love.jpg" alt="Гаррі Поттер" class="small-img">
+      <p><strong>Стосунки:</strong> Гаррі закохався в Джіні Візлі — сестру Рона. Після війни вони одружилися.</p>
+     <img src="life.jpg" alt="Сім'я Поттера" class="small-img">
+      <p><strong>Життя після війни:</strong> Гаррі став аврором у Міністерстві магії та допоміг реформувати систему магічного правосуддя.</p>
+       <img src="family.jpg" alt="Гаррі Поттер" class="small-img">
+      <p><strong>Сім’я:</strong> У нього троє дітей — Джеймс Сіріус, Альбус Северус і Лілі Луна Поттер. Один із синів, Альбус, вступив до Слизерину, що стало несподіванкою.</p>
+      <p><strong>Спадщина:</strong> Гаррі став символом надії та мужності в чарівному світі. Його історія надихає нові покоління магів.</p>
+    
+      <div style="text-align: center; margin: 40px 0;">
+  <a href="harry.html" style="background-color: #ffcc00; color: black; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; box-shadow: 0 0 10px rgba(255,204,0,0.6);">
+    ⬅ Повернутись на головну
+  </a>
+</div>
+</main>
+  </div>
+
+
+  <footer>
+    &copy; 2025 Фан-сайт Гаррі Поттера. Усі права захищені.
+  </footer>
+
+
+</body>
+</html>

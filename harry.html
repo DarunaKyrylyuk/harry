@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HARRY POTTER</title>
+  <link rel="stylesheet" href="harry.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-ico">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0b0b1d;
+      color: white;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      background-color: #0b0b1d;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #f5c518;
+    }
+
+    .search-auth {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar {
+      background-color: #1d1d2f;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 15px;
+      color: white;
+      margin-right: 10px;
+    }
+
+    .search-bar::placeholder {
+      color: #999;
+    }
+
+    .auth-buttons button {
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-left: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .auth-buttons .signup {
+      background-color: #5b5fff;
+      border: none;
+      font-weight: bold;
+    }
+
+    .auth-buttons button:hover {
+      opacity: 0.8;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      background-color: #0b0b1d;
+      padding: 15px 0;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "▼";
+      font-size: 10px;
+      margin-left: 6px;
+    }
+
+    .nav-links a.no-arrow::after {
+      content: none;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 10px 10px;
+    }
+
+    .subtitle {
+      font-style: italic;
+      color: #ccc;
+    }
+
+    .layout {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    main.bio {
+      flex: 3;
+    }
+
+    aside.films {
+      flex: 1;
+      background-color: #1d1d2f;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .broom {
+      display: block;
+      max-width: 100px;
+      margin: 20px auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: #aaa;
+    }
+
+    iframe {
+      max-width: 100%;
+    }
+    
+  </style>
+</head>
+<body>
+<!-- МОДАЛЬНІ ВІКНА -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('loginModal')">&times;</span>
+    <h2>Вхід</h2>
+    <form>
+      <label for="login-email">Email:</label>
+      <input type="email" id="login-email" required>
+      <label for="login-password">Пароль:</label>
+      <input type="password" id="login-password" required>
+      <button type="submit">Увійти</button>
+    </form>
+  </div>
+</div>
+
+<div id="registerModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('registerModal')">&times;</span>
+    <h2>Реєстрація</h2>
+    <form>
+      <label for="register-name">Ім’я:</label>
+      <input type="text" id="register-name" required>
+      <label for="register-email">Email:</label>
+      <input type="email" id="register-email" required>
+      <label for="register-password">Пароль:</label>
+      <input type="password" id="register-password" required>
+      <button type="submit">Зареєструватись</button>
+    </form>
+  </div>
+</div>
+
+  <!-- Навігаційна панель -->
+  <div class="top-bar">
+    <div class="logo">Harry Potter</div>
+    <div class="search-auth">
+      <input type="text" class="search-bar" placeholder="Пошук">
+      <div class="auth-buttons">
+        <button onclick="login()">УВІЙТИ</button>
+        <button class="signup" onclick="register()">РЕЄСТРАЦІЯ</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Навігаційне меню -->
+  <div class="nav-links">
+    <a href="facts.html" target="_blank">Цікаві факти</a>
+    <a href="life.html" target="_blank">Життя</a>
+    <a href="success.html" target="_blank">Друзі Гаррі</a>
+  </div>
+
+  <!-- Основний контент -->
+  <header>
+    <h1>Гаррі Поттер</h1>
+    <p class="subtitle">Блог</p>
+  </header>
+
+  <div class="layout">
+    <main class="bio">
+      <h2>Гаррі Поттер — хто це?</h2>
+      <p>
+        Гаррі Поттер — хлопчик, який вижив після нападу Волдеморта, став легендою у чарівному світі.
+        Він навчався в Гоґвортсі, потрапив у Ґрифіндор і разом з друзями — Герміоною та Роном — боровся з темними силами.
+      </p>
+      <p>
+        Його історія — це поєднання магії, боротьби добра і зла, сили дружби та самопожертви. Гаррі пройшов шлях від
+        самотнього сироти до героя, який переміг Темного Лорда.
+      </p>
+
+      <!-- Відео трейлер -->
+      <h3>Офіційний трейлер:</h3>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VyHV0BRtdxo"
+                title="Harry Potter Trailer" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+    </main>
+
+    <aside class="films">
+      <h3>Фільми:</h3>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=VyHV0BRtdxo" target="_blank">1. Філософський камінь</a></li>
+        <li><a href="https://www.youtube.com/watch?v=1bq0qff4iF8" target="_blank">2. Таємна кімната</a></li>
+        <li><a href="https://www.youtube.com/watch?v=lAxgztbYDbs" target="_blank">3. В’язень Азкабану</a></li>
+        <li><a href="https://www.youtube.com/watch?v=PFWAOnvMd1Q" target="_blank">4. Келих вогню</a></li>
+        <li><a href="https://www.youtube.com/watch?v=y6ZW7KXaXYk" target="_blank">5. Орден Фенікса</a></li>
+        <li><a href="https://www.youtube.com/watch?v=tAiy66Xrsz4" target="_blank">6. Напівкровний принц</a></li>
+        <li><a href="https://www.youtube.com/watch?v=MxqsmsA8y5k" target="_blank">7. Смертельні реліквії: Частина 1</a></li>
+        <li><a href="https://www.youtube.com/watch?v=5NYt1qirBWg" target="_blank">8. Смертельні реліквії: Частина 2</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <img src="ch.png" alt="Летюча мітла" class="broom" />
+
+ <script>
+  function login() {
+    document.getElementById("loginModal").style.display = "block";
+  }
+
+  function register() {
+    document.getElementById("registerModal").style.display = "block";
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+  // Закриття по кліку поза формою
+  window.onclick = function(event) {
+    const login = document.getElementById("loginModal");
+    const register = document.getElementById("registerModal");
+    if (event.target === login) login.style.display = "none";
+    if (event.target === register) register.style.display = "none";
+  };
+</script>
+
+<form id="registerForm">
+  <label for="register-name">Ім’я:</label>
+  <input type="text" id="register-name" name="name" required>
+  <label for="register-email">Email:</label>
+  <input type="email" id="register-email" name="email" required>
+  <label for="register-password">Пароль:</label>
+  <input type="password" id="register-password" name="password" required>
+  <button type="submit">Зареєструватись</button>
+</form>
+<div id="register-msg"></div>
+
+</body>
+</html>
